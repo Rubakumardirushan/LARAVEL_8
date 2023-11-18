@@ -13,6 +13,5 @@
 <input type="submit" value="send">
 
 </form>
-<h1><?=session('msg')?></h1>
 </body>
 </html>

@@ -18,7 +18,9 @@ return " hello dirushan";
 });
 
 Route::get('/', function () {
-return view('index');
+    // how to pass data view use [];
+    $head=" hello heading";
+return view('index',['head'=>$head]);
 });
 
 Route::get('/contact',function(){
