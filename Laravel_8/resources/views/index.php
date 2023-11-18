@@ -9,5 +9,8 @@
 <h1> index page </h1>
 <h1><?=$head?></h1>
 <h1><?=$head1?></h1>
+<a href="<?=url('number/1')?>"> firs page</a>
+<a href="<?=url('number/2')?>">second page</a>
+<a href="<?=url('number')?>">third page</a>
 </body>
 </html>

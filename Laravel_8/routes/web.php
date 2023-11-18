@@ -38,6 +38,24 @@ return redirect('/')->with('msg',$username);
 
 
  // route parameters
- Route::get('number/{id}',function($id){
-return $id;
+ Route::get('number/{id?}',function($id=null){
+if($id==1){
+    return view('user');
+}else if($id==2){
+    return view('index1');
+} else if($id==null){
+    return view('index1');
+
+}
+
  });
+// Route Groups
+Route::prefix('/gallery')->group(function(){
+Route::get('/videos',function(){
+    return '<h1> hello videos</h1>';
+});
+
+Route::get('/photos',function(){
+    return '<h1> hello photos</h1>';
+});
+});
