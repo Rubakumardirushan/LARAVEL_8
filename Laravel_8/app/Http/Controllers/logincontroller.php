@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class logincontroller extends Controller
 {
     public function login(){
-        return '<h1> hello controller</h1>';
+        return view('home');
     }
 
     public function show(Request $request,$id){

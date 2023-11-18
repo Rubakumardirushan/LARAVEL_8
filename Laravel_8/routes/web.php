@@ -74,3 +74,4 @@ if($id==1){
 // user controllers
 Route::get('/login',[logincontroller::class,'login']);
 Route::get('/show/{id}',[logincontroller::class,'show']);
+Route::view('/diru', 'layouts.home');
