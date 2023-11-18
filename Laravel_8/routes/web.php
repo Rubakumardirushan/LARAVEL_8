@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use  App\Http\Controllers\logincontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,3 +70,7 @@ if($id==1){
     return "february";
 }
 })->middleware(['zero','monthnum']);
+
+// user controllers
+Route::get('/login',[logincontroller::class,'login']);
+Route::get('/show/{id}',[logincontroller::class,'show']);
