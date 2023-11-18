@@ -59,3 +59,13 @@ Route::get('/photos',function(){
     return '<h1> hello photos</h1>';
 });
 });
+
+
+//middleware
+Route::get('/months/{id}',function($id){
+if($id==1){
+    return " january";
+}else if($id==2){
+    return "february";
+}
+})->middleware(['zero','monthnum']);
