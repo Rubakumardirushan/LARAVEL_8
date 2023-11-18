@@ -20,7 +20,8 @@ return " hello dirushan";
 Route::get('/', function () {
     // how to pass data view use [];
     $head=" hello heading";
-return view('index',['head'=>$head]);
+    $head1=" hello heading2";
+return view('index',compact('head','head1'));
 });
 
 Route::get('/contact',function(){
