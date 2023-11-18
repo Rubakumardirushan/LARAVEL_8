@@ -35,3 +35,9 @@ return view('user');
     $username=$request->input('username');
 return redirect('/')->with('msg',$username);
  });
+
+
+ // route parameters
+ Route::get('number/{id}',function($id){
+return $id;
+ });
