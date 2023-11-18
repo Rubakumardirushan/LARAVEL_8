@@ -21,7 +21,7 @@ Route::get('/', function () {
     // how to pass data view use [];
     $head=" hello heading";
     $head1=" hello heading2";
-return view('index',compact('head','head1'));
+return view('index')->with('head',$head)->with('head1',$head1);
 });
 
 Route::get('/contact',function(){
