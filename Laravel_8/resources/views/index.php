@@ -7,5 +7,6 @@
 </head>
 <body>
 <h1> index page </h1>
+<h1><?=session('msg')?></h1>
 </body>
 </html>

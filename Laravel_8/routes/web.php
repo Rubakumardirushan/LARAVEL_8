@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,15 @@ return " hello dirushan";
 Route::get('/', function () {
 return view('index');
 });
+
 Route::get('/contact',function(){
 return view('index1');
 });
+
+ Route::get('/userinfo',function(){
+return view('user');
+ });
+ Route::Post('/save',function(Request $request){
+    $username=$request->input('username');
+return redirect('/')->with('msg',$username);
+ });
