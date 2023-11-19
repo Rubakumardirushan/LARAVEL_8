@@ -21,7 +21,7 @@ class userscontroller extends Controller
  $users->save();
 
 
-  return view('userinfo')->with('msg','successfully');
+  return redirect('/display');
     }
 
 public function display(){
@@ -42,5 +42,10 @@ public function updates(Request $request ,$id){
     return redirect('/display');
 
 
+}
+public function delete($id){
+    $user=users::find($id);
+    $user->delete();
+    return redirect('/display');
 }
 }

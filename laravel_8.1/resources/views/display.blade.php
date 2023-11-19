@@ -15,6 +15,7 @@
     <th> phonenumber</th>
     <th>email</th>
     <th>edit</th>
+    <th>Delete</th>
 </thead>
 <tbody>
     <br>
@@ -25,7 +26,9 @@
 
 <td>
 <a href="edit/{{$dis->id}}">Edit</a>
-</td></tr>
+</td>
+
+<td><a href="delete/{{$dis->id}}">delete</a></td></tr>
 
 
 @endforeach
