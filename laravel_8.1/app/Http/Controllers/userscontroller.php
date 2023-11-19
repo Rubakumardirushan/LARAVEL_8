@@ -23,4 +23,24 @@ class userscontroller extends Controller
 
   return view('userinfo')->with('msg','successfully');
     }
+
+public function display(){
+    $displays= users::all();
+    return view('display',['displays'=>$displays]);
+}
+public function edit($id){
+
+    $info=users::find($id);
+    return view('edit-table',['info'=>$info]);
+}
+public function updates(Request $request ,$id){
+    $user=users::find($id);
+    $user->username=$request->input('name');
+    $user->phonenumber=$request->input('phonenumber');
+    $user->email=$request->input('email');
+    $user->save();
+    return redirect('/display');
+
+
+}
 }

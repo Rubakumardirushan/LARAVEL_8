@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user',[userscontroller::class,'create']);
-Route::post('/store',[userscontroller::class,'store']);
+Route::get('user',[userscontroller::class,'create']);
+Route::post('store',[userscontroller::class,'store']);
+Route::get('display',[userscontroller::class,'display']);
+Route::get('edit/{id}',[userscontroller::class,'edit']);
+Route::post('updates/{id}',[userscontroller::class,'updates']);
