@@ -11,14 +11,19 @@ class userscontroller extends Controller
     }
 
     public function store(Request $request){
-        $username=$request->input('name');
-        $email=$request->input('email');
-        $phonenumber=$request->input('phonenumber');
- $users= new users;
- $users->username=$username;
- $users->phonenumber=$phonenumber;
- $users->email=$email;
- $users->save();
+      //  $username=$request->input('name');
+      //  $email=$request->input('email');
+     //   $phonenumber=$request->input('phonenumber');
+
+     $data = $request->only(['name', 'email', 'phonenumber']);
+
+     // Assuming your model is named User
+     $user = User::create($data);
+ //$users= new users;
+// $users->username=$username;
+// $users->phonenumber=$phonenumber;
+// $users->email=$email;
+ //$users->save();
 
 
   return redirect('/display');
